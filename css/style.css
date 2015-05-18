@@ -22,10 +22,12 @@ body{overflow: hidden;overflow-y:scroll;}
 	border-bottom:dotted 1px #CCC;
 }
 #element-menu li a{
-	display: inline-block !important;
-	
+	display: inline-block !important;	
 	color:#333 !important;
-	text-decoration: none !important;
+	text-decoration: none;
+}
+#element-menu li a:hover{
+	text-decoration: underline;
 }
 #element-menu li .element-menu-selector{
 	display: inline-block;
@@ -49,15 +51,10 @@ body{overflow: hidden;overflow-y:scroll;}
 }
 
 #page{
-	padding-top: 30px;padding-bottom:30px; 
-}
-
-
-.wrap{
+	padding-top: 30px;padding-bottom:30px;
 	width: 92%;
 	max-width: 1300px;
-	margin-right: auto;
-	margin-left: auto; 
+	margin:0 auto;
 }
 
 .element-module:before,
@@ -65,15 +62,21 @@ body{overflow: hidden;overflow-y:scroll;}
 .element-module:after{clear:both}
 .element-module{	
 	zoom:1;
-	border-bottom: dotted 1px #CCC;
+	border-bottom: solid 1px #CCC;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
+	min-height: 300px;
+	display: none;
+}
+.element-module.selected{
+	display: block;
 }
 
 .element-module-title{
-	font: 14px/30px sans-serif !important;
+	font: bold 20px/40px  sans-serif !important;
 	padding: 0 20px;
-	border-bottom: solid 1px #CCC;
+	color: #999;	
+	border-bottom: dotted 1px #CCC;
 	max-width: 300px;
 	margin-bottom: 30px;
 }

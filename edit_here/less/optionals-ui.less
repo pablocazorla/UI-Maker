@@ -1,0 +1,21 @@
+// Paper
+@paperPadding: 3%;
+@paperUpShadow:0 2px 3px rgba(0,0,0,.2);
+@paperDownShadow: inset 0 1px 3px rgba(0,0,0,.2);
+@paperBorderRadius:5px;
+.paper{
+	background-color: @backgroundColor;
+	border:solid 1px @borderColor;
+	padding:@paperPadding;
+	margin-bottom: 1.5 *@marginBottom;
+	position: relative;
+}
+.paper.up{
+	box-shadow: @paperUpShadow;
+}
+.paper.down{
+	box-shadow: @paperDownShadow;
+}
+.paper.round{
+	border-radius: @paperBorderRadius;
+}

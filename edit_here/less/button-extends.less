@@ -1,0 +1,63 @@
+/* Button Extend ********************/
+
+@buttonAltColor: #FF9000;
+@buttonWarningColor: #F8B70A;
+@buttonDangerColor: #FF3819;
+@buttonInfoColor: #2897FF;
+
+/* button colors*/
+
+a.button.alt,.button.alt,.submit.alt,input[type="submit"].alt,input[type="button"].alt,input[type="reset"].alt,input.button.alt,button.alt {background-color: @buttonAltColor;border-color:@buttonAltColor;}
+.button.alt:hover,.submit.alt:hover,input[type="submit"].alt:hover,input[type="button"].alt:hover,input[type="reset"].alt:hover,input.button.alt:hover,button.alt:hover {background-color: @buttonAltColor * 1.2;border-color:@buttonAltColor * 1.2;}
+.button.alt:active,.submit.alt:active,input[type="submit"].alt:active,input[type="button"].alt:active,input[type="reset"].alt:active,input.button.alt:active,button.alt:active {background-color: @buttonAltColor * 0.9;border-color:@buttonAltColor * 0.9;}
+
+a.button.warning,.button.warning,.submit.warning,input[type="submit"].warning,input[type="button"].warning,input[type="reset"].warning,input.button.warning,button.warning {background-color: @buttonWarningColor;border-color:@buttonWarningColor;}
+.button.warning:hover,.submit.warning:hover,input[type="submit"].warning:hover,input[type="button"].warning:hover,input[type="reset"].warning:hover,input.button.warning:hover,button.warning:hover {background-color: @buttonWarningColor * 1.2;border-color:@buttonWarningColor * 1.2;}
+.button.warning:active,.submit.warning:active,input[type="submit"].warning:active,input[type="button"].warning:active,input[type="reset"].warning:active,input.button.warning:active,button.warning:active {background-color: @buttonWarningColor * 0.9;border-color:@buttonWarningColor * 0.9;}
+
+a.button.danger,.button.danger,.submit.danger,input[type="submit"].danger,input[type="button"].danger,input[type="reset"].danger,input.button.danger,button.danger {background-color: @buttonDangerColor;border-color:@buttonDangerColor;}
+.button.danger:hover,.submit.danger:hover,input[type="submit"].danger:hover,input[type="button"].danger:hover,input[type="reset"].danger:hover,input.button.danger:hover,button.danger:hover {background-color: @buttonDangerColor * 1.4;border-color:@buttonDangerColor * 1.4;}
+.button.danger:active,.submit.danger:active,input[type="submit"].danger:active,input[type="button"].danger:active,input[type="reset"].danger:active,input.button.danger:active,button.danger:active {background-color: @buttonDangerColor * 0.9;border-color:@buttonDangerColor * 0.9;}
+
+a.button.info,.button.info,.submit.info,input[type="submit"].info,input[type="button"].info,input[type="reset"].info,input.button.info,button.info {background-color: @buttonInfoColor;border-color:@buttonInfoColor;}
+.button.info:hover,.submit.info:hover,input[type="submit"].info:hover,input[type="button"].info:hover,input[type="reset"].info:hover,input.button.info:hover,button.info:hover {background-color: @buttonInfoColor * 1.2;border-color:@buttonInfoColor * 1.2;}
+.button.info:active,.submit.info:active,input[type="submit"].info:active,input[type="button"].info:active,input[type="reset"].info:active,input.button.info:active,button.info:active {background-color: @buttonInfoColor * 0.9;border-color:@buttonInfoColor * 0.9;}
+a.button.normal,.button.normal,.submit.normal,input[type="submit"].normal,input[type="button"].normal,input[type="reset"].normal,input.button.normal,button.normal {background-color: transparent;border-color:transparent; color:@fontColor;}
+.button.normal:hover,.submit.normal:hover,input[type="submit"].normal:hover,input[type="button"].normal:hover,input[type="reset"].normal:hover,input.button.normal:hover,button.normal:hover {background-color: transparent;border-color:transparent;color:@fontColor * 1.2;text-decoration: underline;}
+.button.normal:active,.submit.normal:active,input[type="submit"].normal:active,input[type="button"].normal:active,input[type="reset"].normal:active,input.button.normal:active,button.normal:active {background-color: transparent;border-color:transparent;color:@fontColor * 0.9;}
+
+a.disabled,
+a.button.disabled,
+.button.disabled,
+.submit.disabled,
+input[type="submit"].disabled,
+input[type="button"].disabled,
+input[type="reset"].disabled,
+input.button.disabled,
+button.disabled,
+a.button:disabled,
+.button:disabled,
+.submit:disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input.button:disabled,
+button:disabled
+{opacity: 0.5;filter: alpha(opacity=50);cursor: default;cursor: not-allowed;}
+
+/* button sizes */
+.button.smallest,
+.submit.smallest,
+input[type="submit"].smallest,
+input[type="button"].smallest,
+input[type="reset"].smallest,
+input.button.smallest,
+button.smallest {
+	font-size: 0.5em;
+	line-height: 1em;
+	padding: 0.5em;
+	font-weight: bold;
+}
+a.button.biggest,.button.biggest,.submit.biggest,input[type="submit"].biggest,input[type="button"].biggest,input[type="reset"].biggest,input.button.biggest,button.biggest{
+font-size: 2em;
+}

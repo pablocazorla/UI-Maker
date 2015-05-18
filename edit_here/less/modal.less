@@ -1,0 +1,67 @@
+/* Modal */
+
+@dimmerBackground: rgba(100,100,100,.5);
+@modalPadding:30px;
+@modalBackground:#FFF;
+@modalBorderRadius:4px;
+@modalShadow:0 2px 3px rgba(0,0,0,.2);
+
+.dimmer{
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: @dimmerBackground;
+	cursor: crosshair;
+}
+.modal{
+	position: fixed;
+	z-index: 10000;
+	top:10px;
+	left:50%;
+	width:800px;
+	min-height: 150px;
+	margin-left: -400px;
+	background-color: @modalBackground;
+	border: solid 1px @borderColor;
+	border-radius: @modalBorderRadius;
+	box-shadow: @modalShadow;	
+	-webkit-transition:top .2s, height .2s;
+	-ms-transition:top .2s, height .2s;
+	transition:top .2s, height .2s;
+	padding: @modalPadding;
+}
+.modal.with-controls{
+	padding-bottom: 3 * @modalPadding;
+}
+.modal-ctrls{
+	position: absolute;
+	left: @modalPadding;
+	right: @modalPadding;
+	bottom: @modalPadding;
+	text-align: center;
+}
+.modal-scroller{	
+	overflow:auto; 
+}
+.modal-content{
+	position:relative;
+	padding:1px;
+	min-height: 50px;
+}
+.modal-closer{
+	position:absolute !important;
+	top: 5px;
+	right: 5px;
+	margin:0 !important;
+}
+.loading{
+	text-align: center;
+	opacity: .6;
+}
+.loading.error{	
+	opacity: 1;
+	color: @errorColor;
+}

@@ -1,0 +1,70 @@
+/* Basics *************************************************/
+body{
+	font-family: @fontFamily;
+	font-size: @fontSize;	
+	line-height: @lineHeight;
+	color:@fontColor;
+	background-color: @backgroundColor2;	
+}
+h1{.fontTitles(6);}
+h2{.fontTitles(5);}
+h3{.fontTitles(4);}
+h4{.fontTitles(3);}
+h5{.fontTitles(2);}
+h6{.fontTitles(1);}
+h2{border-bottom: dotted 1px @borderColor;}
+h4,h5,h6{font-weight: bold}
+p{margin-bottom: @marginBottom;}
+a,a:link,a:visited{
+	color:@linkColor;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover{
+	color:1.1 * @linkColor;
+	text-decoration: underline;
+}
+a:active{
+	color: 0.9 * @linkColor;
+}
+a.disabled{
+	color:@linkColor;
+	text-decoration: none;
+}
+strong,b{font-weight: bold;}
+i,em{font-style: italic;}
+code{
+	font-family: monospace;
+	font-weight: bold;
+	display: inline-block;
+	border:solid 1px  @borderColor;
+	padding: 0 0.5em;
+	border-radius: @inputBorderRadius;
+}
+.align-left,.alignleft{text-align: left}
+.align-center,.aligncenter{text-align: center}
+.align-right,.alignright{text-align: right}
+.float-left,.floatleft{float: left}
+.float-none,.floatnone{float:none}
+.float-right,.floatright{float: right}
+.small{font-size: 0.8em}
+.smaller{font-size: 0.5em}
+hr{
+	border:none;
+	height: 3px;
+	margin-bottom:@marginBottom;
+	background-color: @borderColor;
+}
+
+/* Layout */
+.wrap:before,
+.wrap:after{content:"";display:table}
+.wrap:after{clear:both}
+.wrap{
+	zoom:1;
+	min-height: 1px;
+	width:92%;
+	max-width: 1200px;
+	margin-left:auto;
+	margin-right: auto;
+}

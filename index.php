@@ -13,15 +13,21 @@
 	
 	<!-- CSS -->
 	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<!--
 	<link type="text/css" rel="stylesheet/less" href="packer.php?type=less&files=config-ui,ui,optionals-ui,media-ui">
+	-->
 </head>
 <body>
 	<div id="element-menu">
 		<div id="element-menu-title">Elements</div>
 		<ul id="element-menu-list"></ul>
+		<input type="hidden" value="main-configuration,basics" id="inputSaver"/>
 	</div>
 	<div id="element-screen">
 		<div id="page">
+			<div class="element-module required" id="main-c">
+				<div class="element-module-title" id="main-configuration">Main Configuration</div>
+			</div>
 			<div class="element-module">
 				<div class="element-module-title" id="basics">Basics</div>
 				<div class="row">
@@ -604,7 +610,7 @@ $.ajax({
 			</div>
 			<div class="element-module">
 				<div class="element-module-title" id="dropdown">Dropdown</div>
-				<p>Phasellus malesuada massa 
+				Phasellus malesuada massa 
 				<span class="dropdown">
 					<a href="" class="button">Options</a>
 					<ul>
@@ -614,9 +620,8 @@ $.ajax({
 						<li><a href="">Option 3</a></li>
 					</ul>
 				</span>
-				magna.</p>
-				<p>Phasellus malesuada massa 
-				<span class="dropdown to-top to-right">
+				magna.
+				Phasellus malesuada massa <span class="dropdown to-top to-right">
 					<a href="" class="button">Options</a>
 					<ul>
 						<li><a href="">Option 1</a></li>
@@ -624,8 +629,7 @@ $.ajax({
 						<li><hr></li>
 						<li><a href="">Option 3</a></li>
 					</ul>
-				</span>
-				magna.</p>
+				</span>	magna.
 			</div>
 			<div class="element-module">
 				<div class="element-module-title" id="button-group">Button Group</div>

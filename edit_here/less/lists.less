@@ -1,0 +1,28 @@
+/* Lists */
+// lists
+@ulStyle: disc;
+@ulStyle2: circle;
+@ulStyle3: square;
+
+@olStyle: decimal;
+@olStyle2: lower-alpha;
+@olStyle3: lower-roman;
+
+ul.list,ol.list{
+	margin-bottom: @marginBottom;
+	li{
+		padding-top: 0.25 * @marginBottom;
+		padding-bottom: 0.25 * @marginBottom;
+	}
+}
+
+ul.list,ol.list,.list ul,.list ol{padding-left: 1.5em;}
+
+ul.list{list-style: @ulStyle outside none;}
+ol.list{list-style: @olStyle outside none;}
+
+.list ul{list-style: @ulStyle2 outside none;}
+.list ol{list-style: @olStyle2 outside none;}
+
+.list li ul{list-style: @ulStyle3 outside none;}
+.list li ol{list-style: @olStyle3 outside none;}

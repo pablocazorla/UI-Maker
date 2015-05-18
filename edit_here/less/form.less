@@ -1,0 +1,113 @@
+/* FORM *******************************************************/
+
+
+label{
+	.required{
+		color: @foregroundColor;
+	}
+	margin-right: 0.5em;
+	display: inline-block;
+	font-size: .9em;
+}
+
+input[type="text"],
+textarea,
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="file"],
+input[type="number"],
+input[type="color"],
+input[type="search"],
+input[type="url"],
+select{
+  padding: @inputPadding;
+  line-height: @inputLineHeight;
+  outline: none;
+  background-color: @backgroundColor;
+  color: @fontColor * 0.8;
+  border: 1px solid @borderColor;
+  border-radius: @inputBorderRadius;
+  width: 100%
+}
+input[type="text"]:focus,
+textarea:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="file"]:focus,
+input[type="number"]:focus,
+input[type="color"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus{
+  border-color: @borderColor * .7;
+}
+select{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	padding-right: 34px;
+	position: relative;
+	background-image: url('../img/select-bg.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+input[disabled],textarea[disabled]{opacity:.6;}
+textarea {resize: none;}
+::-webkit-input-placeholder {opacity:1;color: @fontColor * 3;}
+:-moz-placeholder {opacity:1;color: @fontColor * 3;}
+::-moz-placeholder {opacity:1;color: @fontColor * 3;}
+:-ms-input-placeholder {opacity:1;color: @fontColor * 3;}
+
+/* radio & checkbox */
+input[type="radio"],
+input[type="checkbox"]{
+	display: none;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label{
+	cursor: pointer;
+	line-height: @inputLineHeight;
+	padding: @inputPadding 0;
+}
+input[type="radio"] + label:before,
+input[type="checkbox"] + label:before{
+	cursor: pointer;
+	content:'';
+	display:inline-block;
+	border:solid 1px @foregroundColor;
+	background-color: @backgroundColor;
+	width: 1em;
+	height: 1em;
+	position: relative;
+	top:0.1em;
+	margin-right: .5em;
+	-webkit-transition: background-color .2s;
+	-ms-transition: background-color .2s;
+	transition: background-color .2s;
+}
+input[type="radio"]:checked + label:before,
+input[type="checkbox"]:checked + label:before{
+	background-color: @foregroundColor;
+	box-shadow: inset 0 0 0 0.15em @backgroundColor;
+}
+input[type="radio"] + label:before{
+	border-radius: 60%;
+}
+input[type="checkbox"] + label:before{
+	width: 1.2em;
+	height: 1.2em;
+	top:0.2em;
+}

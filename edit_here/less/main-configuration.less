@@ -1,0 +1,35 @@
+// Colors
+@fontColor: #444;
+@fontColor2: #111;
+@foregroundColor: #02A200;// Buttons and links
+@foregroundColor2: #999;
+@backgroundColor: #FFF; // Boxes
+@backgroundColor2: #FFF; // Body
+@borderColor: #CCC;
+@invertColor:#FFF;
+@errorColor:#D00;
+@linkColor: @foregroundColor;
+
+// Font Families
+@fontFamily:'Roboto',sans-serif;
+@fontFamily2:'Roboto Slab', serif;
+@fontMonospace: monospace;
+
+// Font Sizes
+@fontSize: 16px;
+@lineHeight:1.4em;
+@marginBottom:1.3 * @fontSize;
+.fontTitles(@num){
+	font-family: @fontFamily2;
+	font-size: 0.8 * @fontSize + ((@num / 6) * (@num / 6) * (@num / 6) * 2.2 * @fontSize);
+	line-height: @lineHeight;
+	margin-bottom: @marginBottom;
+	color:@fontColor2;
+	padding-top: 0.5 * @marginBottom;
+}
+
+@inputBorderRadius: 2px;
+@inputLineHeight: 1.618em;
+@inputPadding: .4em;
+@inputPadding2: 1em;
+@buttonBorderRadius:@inputBorderRadius;

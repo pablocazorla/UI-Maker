@@ -1,0 +1,86 @@
+/* Button ********************/
+
+@buttonColor:@foregroundColor;// Like links and inputs
+@buttonSecondaryColor: #BBB;
+
+
+a.button,
+.button,
+.submit,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input.button,
+button {
+	position: relative;
+	display: inline-block;
+	padding: @inputPadding @inputPadding2;
+	line-height: @inputLineHeight;
+	color: @invertColor;
+	text-align: center;
+	border: none;
+	text-decoration: none;
+	font-size: 1em;
+	cursor: pointer;
+	overflow: visible;
+	width: auto;	
+	white-space: nowrap;
+	background-color: @buttonColor;
+	border:solid 1px @foregroundColor;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: @buttonBorderRadius;
+	-webkit-transition: all .1s;
+	-ms-transition: all .1s;
+	transition: all .1s;	
+}
+
+.button + .button,.button + input,.button + button,.button + .submit,
+.submit + .button,.submit + input,.submit + button,.submit + .submit,
+input + .button,input + input,input + button,input + .submit,
+button + .button,button + input,button + button,button + .submit{
+	margin-left: .5em;
+}
+
+.button:hover,
+.submit:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input.button:hover,
+button:hover {
+	text-decoration: none;
+	background-color: @buttonColor * 1.2;
+	border-color:@buttonColor * 1.2;
+	color: @invertColor;
+}
+.button:active,
+.submit:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input.button:active,
+button:active {
+	background-color: @buttonColor * 0.9;
+	border-color:@buttonColor * 0.9;
+	color: @invertColor;
+}
+
+a.button.secondary,.button.secondary,.submit.secondary,input[type="submit"].secondary,input[type="button"].secondary,input[type="reset"].secondary,input.button.secondary,button.secondary {background-color: @buttonSecondaryColor;border-color:@buttonSecondaryColor;}
+.button.secondary:hover,.submit.secondary:hover,input[type="submit"].secondary:hover,input[type="button"].secondary:hover,input[type="reset"].secondary:hover,input.button.secondary:hover,button.secondary:hover {background-color: @buttonSecondaryColor * 1.2;border-color:@buttonSecondaryColor * 1.2;}
+.button.secondary:active,.submit.secondary:active,input[type="submit"].secondary:active,input[type="button"].secondary:active,input[type="reset"].secondary:active,input.button.secondary:active,button.secondary:active {background-color: @buttonSecondaryColor * 0.9;border-color:@buttonSecondaryColor * 0.9;}
+
+/* button sizes */
+
+.button.small,
+.submit.small,
+input[type="submit"].small,
+input[type="button"].small,
+input[type="reset"].small,
+input.button.small,
+button.small {
+	font-size: 0.8em;
+}
+a.button.big,.button.big,.submit.big,input[type="submit"].big,input[type="button"].big,input[type="reset"].big,input.button.big,button.big,a.button.large,.button.large,.submit.large,input[type="submit"].large,input[type="button"].large,input[type="reset"].large,input.button.large,button.large{font-size: 1.387em}

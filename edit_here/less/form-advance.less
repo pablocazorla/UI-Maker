@@ -1,0 +1,59 @@
+/* Number */
+input[type="number"]{
+	max-width: 4em;
+}
+input[type="number"].rendered{
+	text-align: center;
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
+	border-radius: @inputBorderRadius 0 0 @inputBorderRadius;
+}
+.button-number-cont{
+	display: inline-block;
+	width: 2em;
+	vertical-align: bottom;
+}
+.button.button-number{
+	display: block;
+	padding: 0.5 * @inputPadding 0;
+	line-height: 0.5 * @inputLineHeight;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	
+	border-left: none;
+	
+	border-color: @borderColor;
+}
+.button.button-number:first-child{
+	border-bottom: none;
+	border-radius: 0 @inputBorderRadius 0 0;
+}
+.button.button-number:last-child{
+	border-top: none;
+	border-radius: 0 0 @inputBorderRadius 0;
+	background-color: @foregroundColor * 0.9;
+}
+
+/* Input Color ***/
+input[type="color"]{
+	height: @inputLineHeight +  @inputPadding;
+	max-width: 3em;
+	padding: 0.1em;
+}
+
+/* Input Date ***/
+input[type="date"]{
+	max-width: 10em;
+}
+input[type="month"],
+input[type="week"]{
+	max-width: 15em;
+}
+input[type="time"]{
+	max-width: 7em;
+}
+input[type="datetime-local"]{
+	max-width: 17em;
+}

@@ -1,0 +1,63 @@
+// Tabs
+
+@tabShadowActive:none;
+@tabShadowInactive:inset 0 -2px 1px rgba(0,0,0,.1);
+@tabBorderRadius:4px 4px 0 0;
+@tabHeight:40px;
+@tabPadding: 0 @inputPadding2;
+
+/* tabs */
+.tabs-container{
+	clear: both;
+	margin-bottom: 1.5 * @marginBottom;
+	border-bottom: solid 1px @borderColor;
+}
+.tabs-container .tabs{
+	margin:0;
+	height:@tabHeight + 2px;
+	line-height:@tabHeight;
+	border-bottom: solid 1px @borderColor;
+	display: none;
+}
+.tabs-container .tabs li{
+	display: inline-block;
+	background-color: @backgroundColor2;
+	border: solid 1px @borderColor;
+	border-radius: @tabBorderRadius;
+	box-shadow: @tabShadowInactive;
+	-webkit-transition:background-color .1s
+	;-ms-transition:background-color .1s;
+	transition:background-color .1s;
+}
+.tabs-container .tabs li a{
+	display:block;
+	padding:@tabPadding;
+	text-decoration: none;
+	color: @fontColor;
+	outline: 0;
+}
+.tabs-container .tabs li:hover{
+	background-color: 1.1 * @backgroundColor2;
+}
+.tabs-container .tabs li.active{
+	box-shadow: @tabShadowActive;
+}
+.tabs-container .tabs li.active a{
+	cursor: default;
+}
+.tabs-container .tabs li.active,
+.tabs-container .tabs li.active:hover{
+	background-color: @backgroundColor;
+	border-bottom:solid 1px @backgroundColor;
+}
+.tabs-container .tab-content{
+	padding:1em 0 0;
+	margin-bottom: 1em;
+	display: none;
+}
+.tabs-container .tabs + .tab-content{
+	display: block;
+}
+.tabs-container.rendered .tabs{
+	display: block;
+}

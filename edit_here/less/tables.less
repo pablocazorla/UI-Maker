@@ -1,0 +1,30 @@
+/* Table */
+@paddingTd:1em 2em;
+@paddingFoot:0.7em 2em;
+
+table{
+	width: 100%;
+	margin-bottom: 1.4 * @marginBottom;
+	text-align: left;
+}
+table,
+table tr{
+	border-bottom: solid 1px @borderColor;
+}
+table thead{
+	color:@fontColor2;
+	background-color: 1.05 * @backgroundColor2;
+}
+
+table th,
+table td{
+	padding: @paddingTd;	
+	vertical-align:middle;
+}
+table tfoot{
+	color:@fontColor2;
+	background-color: 1.1 * @backgroundColor2;
+}
+table tfoot td{
+	padding: @paddingFoot;
+}

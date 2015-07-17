@@ -21,8 +21,6 @@ $('document').ready(function() {
 			$inputSaver.val(str);
 		};
 
-
-
 	// Dependencies
 	var dependencies = {
 		'button-extends': ['button'],
@@ -61,7 +59,7 @@ $('document').ready(function() {
 			this.$ec = $('<div class="element-code"></div>').appendTo(this.$mod);
 			var $ect = $('<div class="element-code-tools"></div>').appendTo(this.$ec);
 
-			this.$btnSaveLess = $('<span class="element-code-tool-a">Save less</span>').appendTo($ect);
+			//this.$btnSaveLess = $('<span class="element-code-tool-a">Save less</span>').appendTo($ect);
 
 			this.$textarea = $('<textarea class="element-code-textarea"></textarea>').appendTo(this.$ec);
 
@@ -79,9 +77,9 @@ $('document').ready(function() {
 			this.$textarea.blur(function() {
 				self.update().toggleUnsaved(false);
 			});
-			this.$btnSaveLess.click(function() {
-				self.save();
-			});
+			//this.$btnSaveLess.click(function() {
+			//	self.save();
+			//});
 
 			modules[this.id] = this;
 			return this;
@@ -92,11 +90,20 @@ $('document').ready(function() {
 				var str = self.$textarea.val();
 				if (self.id === 'main-configuration') {
 					mainConfigurationStr = str;
+					self.updateAll('main-configuration');
 				}
 				less.render(mainConfigurationStr + str).then(function(out) {
 					self.$style.html(out.css);
 				});
 			}, 50);
+			return this;
+		},
+		updateAll: function(from) {
+			for(var a in modules){
+				if(a !== from){
+					modules[a].update();
+				}
+			}
 			return this;
 		},
 		save: function() {
@@ -111,6 +118,7 @@ $('document').ready(function() {
 					data: dataString,
 					cache: false,
 					success: function(result) {
+						console.log(result);
 						self.$btnSaveLess.text(origText);
 						self.toggleUnsaved(true);
 					}

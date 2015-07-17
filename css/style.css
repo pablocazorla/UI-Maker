@@ -126,6 +126,7 @@ textarea.element-code-textarea{
 	position: absolute;z-index: 98;
 	top:0;left: 0;width:100%;height:100%;
 	resize:none;
+	border-radius: 0 !important;
 }
 
 .element-code.unsaved .element-code-tool-a{
